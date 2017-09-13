@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+genre = ['Rap', 'Hip-Hop', 'Pop', 'Classical', 'Punk', 'R&B', 'Country']
+
+
+100.times do
+    Song.create(
+        title: Faker::Movie.quote,
+        artist: Faker::GameOfThrones.character,
+        rank: [1..5].sample,
+        genre: genre.sample
+
+    )
+end
